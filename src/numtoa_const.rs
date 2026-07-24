@@ -283,6 +283,12 @@ impl_numtoa_const_for_base_n!(15);
 impl_numtoa_const_for_base_n!(16);
 
 #[test]
+fn ascii_number_constants() {
+    assert_eq!("0", AsciiNumber::<4>::ZERO.as_str());
+    assert_eq!("1", AsciiNumber::<4>::ONE.as_str());
+}
+
+#[test]
 fn str_convenience_base2() {
     assert_eq!("111110100001111011", BaseN::<2>::i32(256123).as_str());
 }
