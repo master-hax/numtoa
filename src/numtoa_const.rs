@@ -30,7 +30,7 @@ impl<const N: usize> AsciiNumber<N> {
 
     pub const ONE: AsciiNumber<N> = {
         let mut string = [0_u8; N];
-        string[N - 1] = b'0';
+        string[N - 1] = b'1';
         let start = N - 1;
         AsciiNumber { string, start }
     };
